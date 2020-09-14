@@ -1,79 +1,88 @@
 {% extends 'home/base.html' %}
 
 {% block head %}
-{%if internship %}
+{% if user.is_startup == True %}
 <title>EDC,TIET-Internships</title>
 {% else %}
 <title>EDC,TIET-Venture Capitalist</title>
 {% endif %}
 <style>
-    .button, form a {
-        margin-right: 20px;
-        border-radius: 10px; 
-        padding: 10px 70px; 
-        margin-top: 20px; 
-        font-size: 21px; 
-        color: black; 
-        text-align: center;
-        display:block; 
-        color: white;
-        transition: 0.5s;
-        background: rgb(46, 146, 187);
-        max-width: 300px;
-        width: 80%;
-    }
+  .button,
+  form a {
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 10px 70px;
+    margin-top: 20px;
+    font-size: 21px;
+    color: black;
+    text-align: center;
+    display: block;
+    color: white;
+    transition: 0.5s;
+    background: rgb(46, 146, 187);
+    max-width: 300px;
+    width: 80%;
+  }
 
-    .button:hover, form a:hover {
-        transform: scale(1.02); 
-        font-size: 21px; 
-        color: black; 
-        text-align: center;
-        display:block; 
-        color: white;
-    }
+  .button:hover,
+  form a:hover {
+    transform: scale(1.02);
+    font-size: 21px;
+    color: black;
+    text-align: center;
+    display: block;
+    color: white;
+  }
 
-    .wrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        margin: 120px 0px;
-        padding: 20px;
-    }
-    
-    body{
-        background-color: #FFFFFF!important;
-      }
-      .main {
-        background-color: #FFFFFF;
-        width: 75%;
-        margin: 7em auto;
-        border-radius: 1.5em;
-        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-        }
-        a{
-            color: rgb(47, 146, 187);
-        }
-        a:hover {
-            color:black;
-        }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 120px 0px;
+    padding: 20px;
+  }
+
+  body {
+    background-color: #FFFFFF !important;
+  }
+
+  .main {
+    background-color: #FFFFFF;
+    width: 75%;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  }
+
+  a {
+    color: rgb(47, 146, 187);
+  }
+
+  a:hover {
+    color: black;
+  }
 </style>
 {% endblock head %}
 
 {% block body %}
-    <div class="main">
-        <form method="post">
-            {% csrf_token %}
-            <h1 style="text-align: center; padding-top: 30px; font-weight: bold;">Are you sure you want to delete "{{ object }}"?</h1>
-            <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; margin: 1%;">
-                <button style="margin-left: auto; margin-bottom: 30px;" class="button"  type='submit'><b>Yes, I am Sure</b></button>
-                {%if internship %}
-                <a style="margin-right: auto; margin-left: auto; margin-bottom: 30px;" href="{% url 'internships' %}">No, Don't Delete</a>
-                {%else%}
-                <a style="margin-right: auto; margin-left: auto; margin-bottom: 30px;" href="{% url 'venture-capitalist' %}">No, Don't Delete</a>
-                {% endif %}
-            </div>
-        </form>
+<div class="main">
+  <form method="post">
+    {% csrf_token %}
+    <h1 style="text-align: center; padding-top: 30px; font-weight: bold;">Are you sure you want to delete
+      "{{ object }}"?</h1>
+    <div style="margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; margin: 1%;">
+      <button style="margin-left: auto; margin-bottom: 30px;" class="button" type='submit'><b>Yes, I am
+          Sure</b></button>
+      {% if user.is_startup == True %}
+      <a style="margin-right: auto; margin-left: auto; margin-bottom: 30px;" href="{% url 'internships' '1' %}">No,
+        Don't Delete</a>
+      {%else%}
+      <a style="margin-right: auto; margin-left: auto; margin-bottom: 30px;" href="{% url 'venture-capitalist' %}">No,
+        Don't Delete</a>
+      {% endif %}
     </div>
+  </form>
+</div>
 {% endblock body %}

@@ -1,673 +1,1391 @@
-{% extends "home/base.html" %}
-{% load static %}
-{% block head %}
+{% extends "home/base.html" %} {% load static %} {% block head %}
 
- <meta name="description" content="Entrepreneurship Development Cell, TIET aims to inculcate Entrepreneurial skills into the students by holding workshops , organizing various events and facilitating incubation to startups of India.">
- <meta name="keywords" content="edctiet, ecell, edc, thapar, edc thapar, entrepreneurship development cell, thapar university, entrepreneur, entrpreneurship, startup, business ">
+<meta
+  name="description"
+  content="Entrepreneurship Development Cell, TIET aims to inculcate Entrepreneurial skills into the students by holding workshops , organizing various events and facilitating incubation to startups of India."
+/>
+<meta
+  name="keywords"
+  content="edctiet, ecell, edc, thapar, edc thapar, entrepreneurship development cell, thapar university, entrepreneur, entrpreneurship, startup, business "
+/>
 <link rel="pingback" href="{% static 'home/xmlrpc.php'%}" />
-<link rel='stylesheet' id='ult-stats-counter-style-css' href="{% static 'home/css/stats-counter.min.css' %}" type='text/css' media='all' />
+<link
+  rel="stylesheet"
+  id="ult-stats-counter-style-css"
+  href="{% static 'home/css/stats-counter.min.css' %}"
+  type="text/css"
+  media="all"
+/>
 <!-- <link rel='stylesheet' id='ult-stats-counter-style-css' href="{% static 'home/css/owl-carousel/docs.theme.min.css' %}" type='text/css' media='all' />
 <link rel='stylesheet' id='ult-stats-counter-style-css' href="{% static 'home/css/owl-carousel/owl.theme.default.min.css' %}" type='text/css' media='all' />
 <link rel='stylesheet' id='ult-stats-counter-style-css' href="{% static 'home/js/owl-carousel/jquery.min.js' %}" type='text/css' media='all' />
 <link rel='stylesheet' id='ult-stats-counter-style-css' href="{% static 'home/js/owl-carousel/owl.carousel.js' %}" type='text/css' media='all' />
  -->
 
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+/>
 
-<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
-
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Josefin+Sans:wght@600&display=swap"
+  rel="stylesheet"
+/>
 
 <title>EDC,TIET - Entrepreneurship Development Cell</title>
 <style type="text/css" data-type="vc_shortcodes-custom-css">
-    .vc_custom_1522954642578 {
-        padding-top: 50px !important;
-        padding-bottom: 70px !important;
+  .vc_custom_1522954642578 {
+    padding-top: 50px !important;
+    padding-bottom: 70px !important;
+  }
+
+  .vc_custom_1494624914514 {
+    padding-top: 50px !important;
+  }
+
+  .vc_custom_1494624919805 {
+    padding-bottom: 100px !important;
+  }
+
+  .vc_custom_1494626839758 {
+    padding-top: 100px !important;
+    padding-bottom: 210px !important;
+  }
+
+  .vc_custom_1494625858679 {
+    margin-top: -150px !important;
+  }
+
+  .vc_custom_1495476778635 {
+    margin-top: 100px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .vc_custom_1494618991842 {
+    padding-top: 50px !important;
+  }
+
+  .vc_custom_1494621972326 {
+    padding-top: 100px !important;
+  }
+
+  .vc_custom_1494621689637 {
+    margin-top: 30px !important;
+  }
+
+  .vc_custom_1494626651578 {
+    margin-top: 0px !important;
+    margin-bottom: 45px !important;
+  }
+
+  .vc_custom_1494628064641 {
+    margin-bottom: 45px !important;
+  }
+
+  .vc_custom_1494626726323 {
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .vc_custom_1494625719386 {
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .vc_custom_1494625728900 {
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .vc_custom_1494625737076 {
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .vc_custom_1495476642306 {
+    padding-bottom: 50px !important;
+  }
+
+  .column {
+    float: left;
+    width: 16.5%;
+    padding: 5px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .slideshow-container {
+    position: relative;
+    margin: 2%;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
     }
-
-    .vc_custom_1494624914514 {
-        padding-top: 50px !important;
+    to {
+      opacity: 1;
     }
+  }
 
-    .vc_custom_1494624919805 {
-        padding-bottom: 100px !important;
+  @keyframes fade {
+    from {
+      opacity: 0.4;
     }
-
-    .vc_custom_1494626839758 {
-        padding-top: 100px !important;
-        padding-bottom: 210px !important;
+    to {
+      opacity: 1;
     }
-
-    .vc_custom_1494625858679 {
-        margin-top: -150px !important;
-    }
-
-    .vc_custom_1495476778635 {
-        margin-top: 100px !important;
-        margin-bottom: 0px !important;
-    }
-
-    .vc_custom_1494618991842 {
-        padding-top: 50px !important;
-    }
-
-    .vc_custom_1494621972326 {
-        padding-top: 100px !important;
-    }
-
-    .vc_custom_1494621689637 {
-        margin-top: 30px !important;
-    }
-
-    .vc_custom_1494626651578 {
-        margin-top: 0px !important;
-        margin-bottom: 45px !important;
-    }
-
-    .vc_custom_1494628064641 {
-        margin-bottom: 45px !important;
-    }
-
-    .vc_custom_1494626726323 {
-        margin-top: 30px !important;
-        margin-bottom: 30px !important;
-    }
-
-    .vc_custom_1494625719386 {
-        margin-top: 0px !important;
-        margin-right: 0px !important;
-        margin-bottom: 0px !important;
-        margin-left: 0px !important;
-        padding-top: 0px !important;
-        padding-right: 0px !important;
-        padding-bottom: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1494625728900 {
-        margin-top: 0px !important;
-        margin-right: 0px !important;
-        margin-bottom: 0px !important;
-        margin-left: 0px !important;
-        padding-top: 0px !important;
-        padding-right: 0px !important;
-        padding-bottom: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1494625737076 {
-        margin-top: 0px !important;
-        margin-right: 0px !important;
-        margin-bottom: 0px !important;
-        margin-left: 0px !important;
-        padding-top: 0px !important;
-        padding-right: 0px !important;
-        padding-bottom: 0px !important;
-        padding-left: 0px !important;
-    }
-
-    .vc_custom_1495476642306 {
-        padding-bottom: 50px !important;
-    }
-
-.column {
-  float: left;
-  width: 16.5%;
-  padding: 5px;
-}
-
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
- 
-
-
-.slideshow-container {
- 
-  position: relative;
-  margin: 2%;
-  
-}
-
-
-.mySlides {
-  display: none;
-}
-
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
+  }
 </style>
 
-<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-<link rel='stylesheet' id='ls-google-fonts-css' href='https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
-<style id='woocommerce-inline-inline-css' type='text/css'>
-    .woocommerce form .form-row .required {
-        visibility: visible;
-    }
+<link rel="dns-prefetch" href="http://fonts.googleapis.com/" />
+<link
+  rel="stylesheet"
+  id="ls-google-fonts-css"
+  href="https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900&amp;subset=latin%2Clatin-ext"
+  type="text/css"
+  media="all"
+/>
+<style id="woocommerce-inline-inline-css" type="text/css">
+  .woocommerce form .form-row .required {
+    visibility: visible;
+  }
 </style>
 
 <style>
-    audio::-webkit-media-controls-timeline,
-    video::-webkit-media-controls-timeline {
-        display: none;
-    }
+  audio::-webkit-media-controls-timeline,
+  video::-webkit-media-controls-timeline {
+    display: none;
+  }
 </style>
 
-<link rel='stylesheet' id='ult-flip-style-css' href="{%static 'home/css/flip-box.min.css'%}" type='text/css' media='all' />
-<link rel='stylesheet' id='info-box-style-css' href="{%static 'home/css/info-box.min.css'%}" type='text/css' media='all' />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link
+  rel="stylesheet"
+  id="ult-flip-style-css"
+  href="{%static 'home/css/flip-box.min.css'%}"
+  type="text/css"
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  id="info-box-style-css"
+  href="{%static 'home/css/info-box.min.css'%}"
+  type="text/css"
+  media="all"
+/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
 <noscript>
-    <style>
-        .woocommerce-product-gallery {
-            opacity: 1 !important;
-        } 
-        .wpb_animate_when_almost_visible {
-            opacity: 1;
-        }
-    </style>
+  <style>
+    .woocommerce-product-gallery {
+      opacity: 1 !important;
+    }
+    .wpb_animate_when_almost_visible {
+      opacity: 1;
+    }
+  </style>
 </noscript>
 
 <style>
-    .vc_row{
-        max-width: 99vw !important;
-    }
+  .vc_row {
+    max-width: 99vw !important;
+  }
 </style>
 <style>
-    @media(max-width: 414px){
-        #cards{
-            min-width: 312px !important;
-            min-height: 550px !important;
-        }
-        #pres_img{
-            margin-left: -20px !important;
-        }
+  @media (max-width: 414px) {
+    #cards {
+      min-width: 312px !important;
+      min-height: 550px !important;
     }
-    @media(max-width:768px){
-        #cards{
-            min-width: 330px !important;
-            min-height: 550px !important; 
-        }
-        #pres_img{
-            margin-left: 85px;
-        }
-        #pmsg{
-            margin-left: 5px;
-        }
-        #pres_txt{
-            margin-left: 35px;
-        }
-        #abouttxt{
-            margin-left: 15px;
-        }
-        #aboutimg{
-            margin-left: -10px;
-        }
-       
+    #pres_img {
+      margin-left: -20px !important;
     }
-    @media(max-width:375px){
-        #cards{
-            min-width: 312px !important;
-            min-height: 550px !important; 
-        }
-        #pres_img{
-            margin-left: -20px;
-        }
+  }
+  @media (max-width: 768px) {
+    #cards {
+      min-width: 330px !important;
+      min-height: 550px !important;
     }
-    @media(max-width:320px){
-        #cards{
-            min-width: 250px !important;
-            min-height: 800px !important; 
-        }
+    #pres_img {
+      margin-left: 85px;
     }
+    #pmsg {
+      margin-left: 5px;
+    }
+    #pres_txt {
+      margin-left: 35px;
+    }
+    #abouttxt {
+      margin-left: 15px;
+    }
+    #aboutimg {
+      margin-left: -10px;
+    }
+  }
+  @media (max-width: 375px) {
+    #cards {
+      min-width: 312px !important;
+      min-height: 550px !important;
+    }
+    #pres_img {
+      margin-left: -20px;
+    }
+  }
+  @media (max-width: 320px) {
+    #cards {
+      min-width: 250px !important;
+      min-height: 800px !important;
+    }
+  }
 </style>
 
+{% endblock head %} 
+{% block bodytag %} 
+class="home page-template-default page
+page-id-17 woocommerce-no-js has-fixed-header wpb-js-composer js-comp-ver-6.0.5
+vc_responsive" style="font-family: 'Josefin Sans', sans-serif;"
+ {% endblock bodytag %} 
+ {% block body %}
+<div class="main-content">
+  <div class="row">
+    <div class="vc_row wpb_row vc_row-fluid">
+      <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner" style="padding-top: 0px">
+          <div class="wpb_wrapper">
+            <div class="wpb_layerslider_element wpb_content_element">
+              <script data-cfasync="false" type="text/javascript">
+                var lsjQuery = jQuery;
+              </script>
 
-{% endblock head %}
+              <script data-cfasync="false" type="text/javascript">
+                lsjQuery(document).ready(function () {
+                  if (typeof lsjQuery.fn.layerSlider == "undefined") {
+                    if (window._layerSlider && window._layerSlider.showNotice) {
+                      window._layerSlider.showNotice("layerslider_1", "jquery");
+                    }
+                  } else {
+                    lsjQuery("#layerslider_1").layerSlider({
+                      sliderVersion: "6.7.1",
+                      type: "fullwidth",
+                      responsiveUnder: 1000,
+                      allowFullscreen: false,
+                      maxRatio: 1000,
+                      navPrevNext: false,
+                      hoverPrevNext: false,
+                      navStartStop: false,
+                      navButtons: false,
+                      showCircleTimer: false,
+                      thumbnailNavigation: "disabled",
+                    });
+                  }
+                });
+              </script>
 
-
-{% block bodytag %}
-class="home page-template-default page page-id-17 woocommerce-no-js has-fixed-header     wpb-js-composer js-comp-ver-6.0.5 vc_responsive" style="font-family: 'Josefin Sans', sans-serif;"
-{% endblock bodytag %}
-
-
-{% block body %}
-<div class="main-content ">
-        <div class="row">
-            <div class="vc_row wpb_row vc_row-fluid">
-                <div class="wpb_column vc_column_container vc_col-sm-12">
-                    <div class="vc_column-inner" style="padding-top: 0px;">
-                        <div class="wpb_wrapper">
-                            <div class="wpb_layerslider_element wpb_content_element">
-                                
-                                <script data-cfasync="false" type="text/javascript">
-                                    var lsjQuery = jQuery;
-                                </script>
-
-                                <script data-cfasync="false" type="text/javascript">
-                                    lsjQuery(document).ready(function() {
-                                        if (typeof lsjQuery.fn.layerSlider == "undefined") {
-                                            if (window._layerSlider && window._layerSlider.showNotice) {
-                                                window._layerSlider.showNotice('layerslider_1', 'jquery');
-                                            }
-                                        } else {
-                                            lsjQuery("#layerslider_1").layerSlider({
-                                                sliderVersion: '6.7.1',
-                                                type: 'fullwidth',
-                                                responsiveUnder: 1000,
-                                                allowFullscreen: false,
-                                                maxRatio: 1000,
-                                                navPrevNext: false,
-                                                hoverPrevNext: false,
-                                                navStartStop: false,
-                                                navButtons: false,
-                                                showCircleTimer: false,
-                                                thumbnailNavigation: 'disabled',
-                                            });
-                                        }
-                                    });
-
-                                </script>
-
-                                <div id="layerslider_1" class="ls-wp-container fitvidsignore" style="background-color: #000; width:1280px;height:730px;margin:0 auto; margin-bottom: 0px;">
-                                    <div class="ls-slide" data-ls="kenburnsscale:1.2;">
-                                        <img width="2000" height="1336" src="{% static 'home/images/ImagesHomePage/images (33).jpeg' %}" class="ls-bg" sizes="(max-width: 2000px) 100vw, 2000px" style="opacity: 0.25;" />
-                                        <p class="ls-l" style="top:450px;left:400px;text-align:center;font-weight:300;font-style:normal;text-decoration: none;color:#2F92BB;font-size:50px; font-weight: bold; font-family:Lato, serif;" data-ls="showinfo:1;parallax:true;parallaxlevel:-15;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">You Ideate, We Foster</p> 
-                                        <p style="top:520px;left:360px;text-align:center;font-weight:300;font-style:normal;text-decoration:none;color:#2F92BB;font-size:20px;font-weight: bold; font-family: Lato, serif;" class="ls-l" data-ls="showinfo:1;parallax:true;parallaxlevel:-15;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">THAPAR INSTITUTE OF ENGINEERING AND TECHNOLOGY</p>
-                                        <h1 style="top:228px;left:241px;text-align:center;font-weight:800;font-style:normal;text-decoration:none;font-family: 'Josefin Sans', sans-serif;font-size:80px;line-height:100px;color:#ffffff; font-family:Lato, serif;" class="ls-l" data-ls="showinfo:1;parallax:true;parallaxlevel:-18;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;">ENTREPRENEURSHIP <br>
-                                            DEVELOPMENT CELL</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div
+                id="layerslider_1"
+                class="ls-wp-container fitvidsignore"
+                style="
+                  background-color: #000;
+                  width: 1280px;
+                  height: 730px;
+                  margin: 0 auto;
+                  margin-bottom: 0px;
+                "
+              >
+                <div class="ls-slide" data-ls="kenburnsscale:1.2;">
+                  <img
+                    width="2000"
+                    height="1336"
+                    src="{% static 'home/images/ImagesHomePage/images (33).jpeg' %}"
+                    class="ls-bg"
+                    sizes="(max-width: 2000px) 100vw, 2000px"
+                    style="opacity: 0.25"
+                  />
+                  <p
+                    class="ls-l"
+                    style="
+                      top: 450px;
+                      left: 400px;
+                      text-align: center;
+                      font-weight: 300;
+                      font-style: normal;
+                      text-decoration: none;
+                      color: #2f92bb;
+                      font-size: 50px;
+                      font-weight: bold;
+                      font-family: Lato, serif;
+                    "
+                    data-ls="showinfo:1;parallax:true;parallaxlevel:-15;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;"
+                  >
+                    You Ideate, We Foster
+                  </p>
+                  <p
+                    style="
+                      top: 520px;
+                      left: 360px;
+                      text-align: center;
+                      font-weight: 300;
+                      font-style: normal;
+                      text-decoration: none;
+                      color: #2f92bb;
+                      font-size: 20px;
+                      font-weight: bold;
+                      font-family: Lato, serif;
+                    "
+                    class="ls-l"
+                    data-ls="showinfo:1;parallax:true;parallaxlevel:-15;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;"
+                  >
+                    THAPAR INSTITUTE OF ENGINEERING AND TECHNOLOGY
+                  </p>
+                  <h1
+                    style="
+                      top: 228px;
+                      left: 241px;
+                      text-align: center;
+                      font-weight: 800;
+                      font-style: normal;
+                      text-decoration: none;
+                      font-family: 'Josefin Sans', sans-serif;
+                      font-size: 80px;
+                      line-height: 100px;
+                      color: #ffffff;
+                      font-family: Lato, serif;
+                    "
+                    class="ls-l"
+                    data-ls="showinfo:1;parallax:true;parallaxlevel:-18;parallaxtype:3d;parallaxevent:scroll;parallaxaxis:y;"
+                  >
+                    ENTREPRENEURSHIP <br />
+                    DEVELOPMENT CELL
+                  </h1>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!--About EDC-->
-            <div class="vc_row wpb_row vc_row-fluid vc_custom_1494624914514" style="padding-left: 50px; padding-right: 60px; margin-top: 50px; padding-top: 80px !important; padding-bottom: 30px !important; margin-left: 0px !important;">
-                <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInDown" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                    <div id="ultimate-heading-58855ec7fe8b6b57b" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982 " data-hspacer="line_only" data-halign="center" style="text-align:center">
-                        <div class="uvc-main-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2' data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'>
-                            <h2 style="font-family: 'Cinzel', serif;font-weight:700;color:#333333;">ABOUT EDC</h2>
-                        </div>
-                        <div class="uvc-heading-spacer line_only" style="margin-top:20px;margin-bottom:35px;height:2px;">
-                            <span class="uvc-headings-line" style="border-style:solid;border-bottom-width:2px;border-color:#2f92bb;width:70px;"></span>
-                        </div>
-                        <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;">
-                        </div>
-                    </div>
+    <!--About EDC-->
+    <div
+      class="vc_row wpb_row vc_row-fluid vc_custom_1494624914514"
+      style="
+        padding-left: 50px;
+        padding-right: 60px;
+        margin-top: 50px;
+        padding-top: 80px !important;
+        padding-bottom: 30px !important;
+        margin-left: 0px !important;
+      "
+    >
+      <div
+        class="ult-animation ult-animate-viewport ult-no-mobile"
+        data-animate="fadeInDown"
+        data-animation-delay="0"
+        data-animation-duration="3"
+        data-animation-iteration="1"
+        style="opacity: 0"
+        data-opacity_start_effect=""
+      >
+        <div
+          id="ultimate-heading-58855ec7fe8b6b57b"
+          class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982"
+          data-hspacer="line_only"
+          data-halign="center"
+          style="text-align: center"
+        >
+          <div
+            class="uvc-main-heading ult-responsive"
+            data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2"
+            data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'
+          >
+            <h2
+              style="
+                font-family: 'Cinzel', serif;
+                font-weight: 700;
+                color: #333333;
+              "
+            >
+              ABOUT EDC
+            </h2>
+          </div>
+          <div
+            class="uvc-heading-spacer line_only"
+            style="margin-top: 20px; margin-bottom: 35px; height: 2px"
+          >
+            <span
+              class="uvc-headings-line"
+              style="
+                border-style: solid;
+                border-bottom-width: 2px;
+                border-color: #2f92bb;
+                width: 70px;
+              "
+            ></span>
+          </div>
+          <div
+            class="uvc-sub-heading ult-responsive"
+            data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading "
+            data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}'
+            style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;"
+          ></div>
+        </div>
+      </div>
+
+      <div class="wpb_column vc_column_container vc_col-md-5" id="aboutimg">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div
+              class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_fadeInLeft fadeInLeft"
+            >
+              <figure class="wpb_wrapper vc_figure">
+                <div
+                  class="vc_single_image-wrapper vc_box_border_grey"
+                  style="display: flex"
+                >
+                  <img
+                    alt="about edc"
+                    style="width: 100%; margin-left: 10px"
+                    src="{%static 'home/images/ImagesHomePage/AboutUsImage.jpg'%}"
+                    class="vc_single_image-img attachment-full"
+                    alt="aboutUsImage"
+                    style="padding-top: 20%"
+                  />
                 </div>
-                
-                <div class="wpb_column vc_column_container vc_col-md-5" id="aboutimg">
-                    <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="wpb_single_image wpb_content_element vc_align_left  wpb_animate_when_almost_visible wpb_fadeInLeft fadeInLeft">
-
-                                <figure class="wpb_wrapper vc_figure">
-                                    <div class="vc_single_image-wrapper   vc_box_border_grey" style="display: flex;"><img alt="about edc" style="width:100%;margin-left:10px;" src="{%static 'home/images/ImagesHomePage/AboutUsImage.jpg'%}" class="vc_single_image-img attachment-full" alt="aboutUsImage" style="padding-top: 20%" /></div>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="wpb_column vc_column_container vc_col-md-7" id="abouttxt">
-                    <div class="vc_column-inner vc_custom_1494621972326" style="padding-top: 22px !important;">
-                        <div class="wpb_wrapper">
-                            <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInRight" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                <div id="ultimate-heading-3055ec7fe8b6caae" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-3055ec7fe8b6caae uvc-3649 " data-hspacer="line_only" data-halign="left" style="text-align:left">
-                                    <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666; text-align: justify;margin-right:30px;"> The Entrepreneurship  Development cell, Thapar Institute of Engineering and Technology, Patiala has been established with an aim to foster and nurture talented young minds with a vision. With India witnessing the rise of start up culture, we encourage and guide everyone who is bitten by the spirit of entrepreneurship. Imagination dies a dreadful death as we grow, but here, we nurture the imagination of young entrepreneurs by providing a platform to present their seminal ideas. We envision a team of spirited individuals who strive to make resources accessible to students and provide them an easy link to venture capital firms, successful entrepreneurs, executive professionals and corporations so that they can watch their dreams become reality. We believe that entrepreneurship is the key to unlock India's talent and untapped potential and thus we are striving to create, foster and promote entrepreneurship.</div>
-                                </div>
-
-                                <div class=" vc_custom_1494621689637 ubtn-ctn-left "><a class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom " href="{% url 'our-team' %}"><button type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;"><span class="ubtn-data ubtn-icon"><i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;" aria-hidden:true></i></span><span class="ubtn-hover" style="background-color:#f9f9f9"></span><span class="ubtn-data ubtn-text ">Know us more</span></button></a></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+              </figure>
             </div>
-            <!-- About EDC Background -->
-            <div class="upb_color" data-bg-override="0" data-bg-color="" data-fadeout="" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
+          </div>
+        </div>
+      </div>
 
-            <!-- What We Do At EDC-->
-            <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1522954642578" style="margin-top: 100px;">
-                <div class="wpb_column vc_column_container vc_col-sm-12">
-                    <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper"></div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-6">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInDown" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                                <div id="ultimate-heading-58855ec7fe8b6b57b" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982 " data-hspacer="line_only" data-halign="center" style="text-align:center">
-                                                    <div class="uvc-main-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2' data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'>
-                                                        <h2 style="font-family: 'Cinzel', serif;font-weight:700;color:#333333;">WHAT WE DO AT EDC</h2>
-                                                    </div>
-                                                    <div class="uvc-heading-spacer line_only" style="margin-top:20px;margin-bottom:35px;height:2px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:2px; border-color:#2f92bb;;width:70px;"></span></div>
-                                                    <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-                                                <div class="wpb_wrapper">
-                                                    <style>
-                                                        @media screen and (max-width: 600px) {
-                                                            .vc_custom_1522954642578 {
-                                                                padding-top: 20px !important;
-                                                            }
-                                                        }
-
-                                                    </style>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1494618991842">
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="aio-icon-component    style_2">
-                                                <div id="Info-box-wrap-8529" class="aio-icon-box top-icon">
-                                                    <div class="aio-icon-top">
-                                                        <div class="ult-just-icon-wrapper  ">
-                                                            <div class="align-icon" style="text-align:center;">
-                                                                <div class="aio-icon none " data-animation="slideInDown" data-animation-delay="03" style="color:#2f92bb;font-size:32px;display:inline-block;">
-                                                                    <i class="fas fa-child fa-3x"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="aio-icon-header">
-                                                        <h3 class="aio-icon-title ult-responsive" data-ultimate-target='#Info-box-wrap-8529 .aio-icon-title' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family: 'Cinzel', serif">Spirit</h3>
-                                                    </div> <!-- header -->
-                                                    <div class="aio-icon-description ult-responsive" data-ultimate-target='#Info-box-wrap-8529 .aio-icon-description' data-responsive-json-new='{"font-size":"","line-height":""}'>
-                                               
-                                                        <p style="text-align: center; font-family: Josefin Sans;"> To develop the spirit of Entrepreneurship among the students and transform them from job seekers to job creators.</p>
-
-                                                    </div> <!-- description -->
-                                                </div> <!-- aio-icon-box -->
-                                            </div> <!-- aio-icon-component -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="aio-icon-component    style_3">
-                                                <div id="Info-box-wrap-7156" class="aio-icon-box top-icon">
-                                                    <div class="aio-icon-top">
-                                                        <div class="ult-just-icon-wrapper  ">
-                                                            <div class="align-icon" style="text-align:center;">
-                                                                <div class="aio-icon none " data-animation="slideInDown" data-animation-delay="03" style="color:#2f92bb;font-size:32px;display:inline-block;">
-                                                                    <i class="fas fa-hand-holding-usd fa-3x"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="aio-icon-header">
-                                                        <h3 class="aio-icon-title ult-responsive" data-ultimate-target='#Info-box-wrap-7156 .aio-icon-title' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family: 'Cinzel', serif">Financial Support</h3>
-                                                    </div> <!-- header -->
-                                                    <div class="aio-icon-description ult-responsive" data-ultimate-target='#Info-box-wrap-7156 .aio-icon-description' data-responsive-json-new='{"font-size":"","line-height":""}'>
-                                
-                                                        <p style="text-align: center;"> We aim at providing Startups financial help so as to make sure that finance should not be barrier in the path of successful idea through our initiatives such as The Startup Expo</p>
-                                                    </div> <!-- description -->
-                                                </div> <!-- aio-icon-box -->
-                                            </div> <!-- aio-icon-component -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="aio-icon-component    style_3">
-                                                <div id="Info-box-wrap-3435" class="aio-icon-box top-icon" style="">
-                                                    <div class="aio-icon-top">
-                                                        <div class="ult-just-icon-wrapper  ">
-                                                            <div class="align-icon" style="text-align:center;">
-                                                                <div class="aio-icon none " data-animation="slideInDown" data-animation-delay="03" style="color:#2f92bb;font-size:32px;display:inline-block;">
-                                                                    <i class="fab fa-gripfire fa-3x"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="aio-icon-header">
-                                                        <h3 class="aio-icon-title ult-responsive" data-ultimate-target='#Info-box-wrap-3435 .aio-icon-title' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family: 'Cinzel', serif">Development</h3>
-                                                    </div> <!-- header -->
-                                                    <div class="aio-icon-description ult-responsive" data-ultimate-target='#Info-box-wrap-3435 .aio-icon-description' data-responsive-json-new='{"font-size":"","line-height":""}' style="">
-                                                    
-                                                        <p style="text-align: center;"> Developing spirit of Entrepreneurship so as to develop an attitude and approach to thinking that actively seeks out change, rather than waiting to adapt to change.</p>
-                                                    </div> <!-- description -->
-                                                </div> <!-- aio-icon-box -->
-                                            </div> <!-- aio-icon-component -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="aio-icon-component    style_3">
-                                                <div id="Info-box-wrap-5288" class="aio-icon-box top-icon" style="">
-                                                    <div class="aio-icon-top">
-                                                        <div class="ult-just-icon-wrapper  ">
-                                                            <div class="align-icon" style="text-align:center;">
-                                                                <div class="aio-icon none " data-animation="slideInDown" data-animation-delay="03" style="color:#2f92bb;font-size:32px;display:inline-block;">
-                                                                    <i class="fas fa-lightbulb fa-3x"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="aio-icon-header">
-                                                        <h3 class="aio-icon-title ult-responsive" data-ultimate-target='#Info-box-wrap-5288 .aio-icon-title' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family: 'Cinzel', serif">Internships</h3>
-                                                    </div> <!-- header -->
-                                                    <div class="aio-icon-description ult-responsive" data-ultimate-target='#Info-box-wrap-5288 .aio-icon-description' data-responsive-json-new='{"font-size":"","line-height":""}' style="">
-                                                        <p style="text-align: center;"> Proving student with Internships so as to develop practical skills and helping startups to grow by helping them to choose the best interns.</p>
-                                                    </div> <!-- description -->
-                                                </div> <!-- aio-icon-box -->
-                                            </div> <!-- aio-icon-component -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="wpb_column vc_column_container vc_col-md-7" id="abouttxt">
+        <div
+          class="vc_column-inner vc_custom_1494621972326"
+          style="padding-top: 22px !important"
+        >
+          <div class="wpb_wrapper">
+            <div
+              class="ult-animation ult-animate-viewport ult-no-mobile"
+              data-animate="fadeInRight"
+              data-animation-delay="0"
+              data-animation-duration="3"
+              data-animation-iteration="1"
+              style="opacity: 0"
+              data-opacity_start_effect=""
+            >
+              <div
+                id="ultimate-heading-3055ec7fe8b6caae"
+                class="uvc-heading ult-adjust-bottom-margin ultimate-heading-3055ec7fe8b6caae uvc-3649"
+                data-hspacer="line_only"
+                data-halign="left"
+                style="text-align: left"
+              >
+                <div
+                  class="uvc-sub-heading ult-responsive"
+                  data-ultimate-target=".uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading "
+                  data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}'
+                  style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666; text-align: justify;margin-right:30px;"
+                >
+                  The Entrepreneurship Development cell, Thapar Institute of
+                  Engineering and Technology, Patiala has been established with
+                  an aim to foster and nurture talented young minds with a
+                  vision. With India witnessing the rise of start up culture, we
+                  encourage and guide everyone who is bitten by the spirit of
+                  entrepreneurship. Imagination dies a dreadful death as we
+                  grow, but here, we nurture the imagination of young
+                  entrepreneurs by providing a platform to present their seminal
+                  ideas. We envision a team of spirited individuals who strive
+                  to make resources accessible to students and provide them an
+                  easy link to venture capital firms, successful entrepreneurs,
+                  executive professionals and corporations so that they can
+                  watch their dreams become reality. We believe that
+                  entrepreneurship is the key to unlock India's talent and
+                  untapped potential and thus we are striving to create, foster
+                  and promote entrepreneurship.
                 </div>
+              </div>
+
+              <div class="vc_custom_1494621689637 ubtn-ctn-left">
+                <a
+                  class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom"
+                  href="{% url 'our-team' %}"
+                  ><button
+                    type="button"
+                    id="ubtn-2814"
+                    class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg none ubtn-sep-icon ubtn-sep-icon-left-push ubtn-left tooltip-5ec7fe8b6caec"
+                    data-hover="#2f92bb"
+                    data-border-color="#2f92bb"
+                    data-bg="#2f92bb"
+                    data-hover-bg="#f9f9f9"
+                    data-border-hover="#2f92bb"
+                    data-shadow-hover=""
+                    data-shadow-click="none"
+                    data-shadow=""
+                    data-shd-shadow=""
+                    data-ultimate-target="#ubtn-2814"
+                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                    style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;"
+                  >
+                    <span class="ubtn-data ubtn-icon"
+                      ><i
+                        class="fas fa-rocket"
+                        style="font-size: 32px; color: #2f92bb"
+                        aria-hidden:true
+                      ></i></span
+                    ><span
+                      class="ubtn-hover"
+                      style="background-color: #f9f9f9"
+                    ></span
+                    ><span class="ubtn-data ubtn-text">Know us more</span>
+                  </button></a
+                >
+              </div>
             </div>
-            <div class="vc_row-full-width vc_clearfix"></div>
-            <div class="upb_color" data-bg-override="0" data-bg-color="#eee" data-fadeout="" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About EDC Background -->
+    <div
+      class="upb_color"
+      data-bg-override="0"
+      data-bg-color=""
+      data-fadeout=""
+      data-fadeout-percentage="30"
+      data-parallax-content=""
+      data-parallax-content-sense="30"
+      data-row-effect-mobile-disable="true"
+      data-img-parallax-mobile-disable="true"
+      data-rtl="false"
+      data-custom-vc-row=""
+      data-vc="6.0.5"
+      data-is_old_vc=""
+      data-theme-support=""
+      data-overlay="false"
+      data-overlay-color=""
+      data-overlay-pattern=""
+      data-overlay-pattern-opacity=""
+      data-overlay-pattern-size=""
+    ></div>
 
-            <!-- Upcoming Events -->
-
-            <div class="vc_row wpb_row vc_row-fluid vc_custom_1494625858679" id="events_cards" style="margin-top: 100px !important">
-                <div class="wpb_column vc_column_container vc_col-sm-12">
-                    <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInDown" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                <div id="ultimate-heading-58855ec7fe8b6b57b" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982 " data-hspacer="line_only" data-halign="center" style="text-align:center">
-                                    <div class="uvc-main-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2' data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'>
-                                        <h2 style="font-family: 'Cinzel', serif;font-weight:700;color:#333333;">UPCOMING EVENTS</h2>
-                                    </div>
-                                    <div class="uvc-heading-spacer line_only" style="margin-top:20px;margin-bottom:35px;height:2px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:2px; border-color:#2f92bb;;width:70px;"></span></div>
-                                    <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-                                <div class="wpb_wrapper">
-                                    <style>
-                                        @media screen and (max-width: 600px) {
-                                            .vc_custom_1522954642578 {
-                                                padding-top: 20px !important;
-                                            }
-                                        }
-
-                                    </style>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- What We Do At EDC-->
+    <div
+      data-vc-full-width="true"
+      data-vc-full-width-init="false"
+      class="vc_row wpb_row vc_row-fluid vc_custom_1522954642578"
+      style="margin-top: 100px"
+    >
+      <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div class="vc_row wpb_row vc_inner vc_row-fluid">
+              <div class="wpb_column vc_column_container vc_col-sm-3">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper"></div>
                 </div>
-
-                <div class="wpb_column vc_column_container vc_col-sm-4" style="width:40%; margin:3% 5% 5% 5%">
-                    <div class="vc_column-inner vc_custom_1494625737076">
-                        <div class="wpb_wrapper">
-                            <div class="flip-box-wrap" style="margin:0px;padding:0px;">
-                                <div class="flip-box ifb-custom-height horizontal_door_flip flip-box-custom-height flip-ifb-custom-height" id="cards" style="min-width: 450px" data-min-height='550px'>
-                                    <div class="ifb-flip-box" id="flip-box-wrap-9665">
-                                        <div class="ifb-face ifb-front " style="color:#333333;background:#f3eeee;">
-                                            <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
-                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 29px; font-style: 'Montserrat';">HAWKEYE</h3>
-                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 18px">
-                                                    <p>22nd-23rd AUGUST, 2020</p>
-                                                </div>
-                                                <img class="img-icon" alt="Venture-Lab" src="{%static 'home/images/ImagesHomePage/hawkeye.jpeg'%}" height="500px" width="500px" />
-                                                <p>HawkEye is our flagship Online trading event where participants can experience the adrenaline rush of stock markets in a virtual trading platform.</p>
-                                            </div>
-                                        </div><!-- END .front -->
-                                        <div class="ifb-face ifb-back" id="cards" style="color:#333333;background:#fcfcfc;">
-                                            <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
-                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; ">HAWKEYE</h3>
-                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#333333;">
-                                                    <p style="text-align: justify;">HawkEye is an online trading battle where participants are provided with virtual currency to buy/sell equities of companies from various sectors on a virtual trading platform. News flashes will decide the fate of the companies across different sectors.
-
-                                                        <br>People can test strategies and contingency plans in this event to develop spontaneous decision taking skills and risk management. 
-                                                        
-                                                        <br>The ultimate goal is to finish with as much capital as possible.</p>
-                                                </div>
-                                                <div class=" vc_custom_1494621689637 ubtn-ctn-left " style="padding-left: 30%">
-                                                    <a class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom " href="http://www.hawkeye.edctiet.com/">
-                                                        <button type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;" style="margin-left: 20px">
-                                                            <span class="ubtn-data ubtn-icon"><i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;"></i></span>
-                                                            <span class="ubtn-hover" style="background-color:#f9f9f9"></span>
-                                                            <span class="ubtn-data ubtn-text ">Know More</span>
-                                                        </button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div><!-- END .back -->
-                                    </div> <!-- ifb-flip-box -->
-                                </div> <!-- flip-box -->
-                            </div><!-- End icon block -->
+              </div>
+              <div class="wpb_column vc_column_container vc_col-sm-6">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    <div
+                      class="ult-animation ult-animate-viewport ult-no-mobile"
+                      data-animate="fadeInDown"
+                      data-animation-delay="0"
+                      data-animation-duration="3"
+                      data-animation-iteration="1"
+                      style="opacity: 0"
+                      data-opacity_start_effect=""
+                    >
+                      <div
+                        id="ultimate-heading-58855ec7fe8b6b57b"
+                        class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982"
+                        data-hspacer="line_only"
+                        data-halign="center"
+                        style="text-align: center"
+                      >
+                        <div
+                          class="uvc-main-heading ult-responsive"
+                          data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2"
+                          data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'
+                        >
+                          <h2
+                            style="
+                              font-family: 'Cinzel', serif;
+                              font-weight: 700;
+                              color: #333333;
+                            "
+                          >
+                            WHAT WE DO AT EDC
+                          </h2>
                         </div>
-                    </div>
-                </div>
-
-                <div class="wpb_column vc_column_container vc_col-sm-4" style="width:40%; margin:3% 5% 5% 5%">
-                    <div class="vc_column-inner vc_custom_1494625737076">
-                        <div class="wpb_wrapper">
-                            <div class="flip-box-wrap" style="margin:0px;padding:0px;">
-                                <div class="flip-box ifb-custom-height  horizontal_door_flip flip-box-custom-height flip-ifb-custom-height" id="cards" style="min-width: 450px" data-min-height='550px'>
-                                    <div class="ifb-flip-box" id="flip-box-wrap-9665">
-                                        <div class="ifb-face ifb-front " style="color:#333333;background:#f3eeee;">
-                                            <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
-                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 29px; font-style: 'Montserrat';">
-                                                    E-SUMMIT
-                                                </h3>
-                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; font-size: 18px">
-                                                    <p>
-                                                        FEBURARY, 2021
-                                                    </p>
-                                                </div>
-                                                <img class="img-icon" alt="E-summit" src="{%static 'home/images/ImagesHomePage/esummit.jpg'%}" height="500px" width="500px" />
-                                                <p>
-                                                    E -summit - our flagship event - brings to you for 3 days a series of exciting games, inspiring talks and our most awaited internship fair to awaken the spirit of entrepreneurship in you.
-                                                </p>
-                                            </div>
-                                        </div><!-- END .front -->
-                                        <div class="ifb-face ifb-back" id="cards" style="color:#333333;background:#fcfcfc;  ">
-                                            <div class="ifb-flip-box-section ifb-flip-box-section-vertical-middle">
-                                                <h3 class="ult-responsive flipbox_heading" data-ultimate-target='#flip-box-wrap-9665 .ult-responsive.flipbox_heading' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333; ">E-SUMMIT</h3>
-                                                <div class="ifb-flip-box-section-content ult-responsive" data-ultimate-target='#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive' data-responsive-json-new='{"font-size":"","line-height":""}' style="color:#333333;color:#333333;">
-                                                    <p style="text-align: justify;">The Entrepreneurship Cell is Asia's largest entrepreneurship promoting college body. Our flagship event, The E-Summit continues to inspire countless ideas, expedite innovative startups and multiply fruitful networks through a jam-packed cluster of events designed for everyone. The E-Summit 2020 aims to accelerate these ideas through the stratosphere. Because we know that great ideas are hard to come by!</p>
-                                                </div>
-                                                <div class=" vc_custom_1494621689637 ubtn-ctn-left " style="padding-left: 30%">
-                                                    <a class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom " href="{% url 'esummit' %}">
-                                                        <button type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;" style="margin-left: 20px">
-                                                            <span class="ubtn-data ubtn-icon"><i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;"></i></span>
-                                                            <span class="ubtn-hover" style="background-color:#f9f9f9"></span>
-                                                            <span class="ubtn-data ubtn-text ">Know More</span>
-                                                        </button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div><!-- END .back -->
-                                    </div> <!-- ifb-flip-box -->
-                                </div> <!-- flip-box -->
-                            </div><!-- End icon block -->
+                        <div
+                          class="uvc-heading-spacer line_only"
+                          style="
+                            margin-top: 20px;
+                            margin-bottom: 35px;
+                            height: 2px;
+                          "
+                        >
+                          <span
+                            class="uvc-headings-line"
+                            style="
+                              border-style: solid;
+                              border-bottom-width: 2px;
+                              border-color: #2f92bb;
+                              width: 70px;
+                            "
+                          ></span>
                         </div>
+                        <div
+                          class="uvc-sub-heading ult-responsive"
+                          data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading "
+                          data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}'
+                          style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;"
+                        ></div>
+                      </div>
                     </div>
+                    <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                      <div class="wpb_wrapper">
+                        <style>
+                          @media screen and (max-width: 600px) {
+                            .vc_custom_1522954642578 {
+                              padding-top: 20px !important;
+                            }
+                          }
+                        </style>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-
+              </div>
+              <div class="wpb_column vc_column_container vc_col-sm-3">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper"></div>
+                </div>
+              </div>
             </div>
-            
-            <!--Upcoming Events Background -->
-            <div class="upb_color" data-bg-override="0" data-bg-color="#fff" data-fadeout="" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
+            <div
+              class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1494618991842"
+            >
+              <div class="wpb_column vc_column_container vc_col-sm-3">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    <div class="aio-icon-component style_2">
+                      <div
+                        id="Info-box-wrap-8529"
+                        class="aio-icon-box top-icon"
+                      >
+                        <div class="aio-icon-top">
+                          <div class="ult-just-icon-wrapper">
+                            <div class="align-icon" style="text-align: center">
+                              <div
+                                class="aio-icon none"
+                                data-animation="slideInDown"
+                                data-animation-delay="03"
+                                style="
+                                  color: #2f92bb;
+                                  font-size: 32px;
+                                  display: inline-block;
+                                "
+                              >
+                                <i class="fas fa-child fa-3x"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="aio-icon-header">
+                          <h3
+                            class="aio-icon-title ult-responsive"
+                            data-ultimate-target="#Info-box-wrap-8529 .aio-icon-title"
+                            data-responsive-json-new='{"font-size":"","line-height":""}'
+                            style="font-family: 'Cinzel', serif"
+                          >
+                            Spirit
+                          </h3>
+                        </div>
+                        <!-- header -->
+                        <div
+                          class="aio-icon-description ult-responsive"
+                          data-ultimate-target="#Info-box-wrap-8529 .aio-icon-description"
+                          data-responsive-json-new='{"font-size":"","line-height":""}'
+                        >
+                          <p
+                            style="
+                              text-align: center;
+                              font-family: Josefin Sans;
+                            "
+                          >
+                             To develop the spirit of Entrepreneurship among the
+                            students and transform them from job seekers to job
+                            creators.
+                          </p>
+                        </div>
+                        <!-- description -->
+                      </div>
+                      <!-- aio-icon-box -->
+                    </div>
+                    <!-- aio-icon-component -->
+                  </div>
+                </div>
+              </div>
+              <div class="wpb_column vc_column_container vc_col-sm-3">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    <div class="aio-icon-component style_3">
+                      <div
+                        id="Info-box-wrap-7156"
+                        class="aio-icon-box top-icon"
+                      >
+                        <div class="aio-icon-top">
+                          <div class="ult-just-icon-wrapper">
+                            <div class="align-icon" style="text-align: center">
+                              <div
+                                class="aio-icon none"
+                                data-animation="slideInDown"
+                                data-animation-delay="03"
+                                style="
+                                  color: #2f92bb;
+                                  font-size: 32px;
+                                  display: inline-block;
+                                "
+                              >
+                                <i class="fas fa-hand-holding-usd fa-3x"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="aio-icon-header">
+                          <h3
+                            class="aio-icon-title ult-responsive"
+                            data-ultimate-target="#Info-box-wrap-7156 .aio-icon-title"
+                            data-responsive-json-new='{"font-size":"","line-height":""}'
+                            style="font-family: 'Cinzel', serif"
+                          >
+                            Financial Support
+                          </h3>
+                        </div>
+                        <!-- header -->
+                        <div
+                          class="aio-icon-description ult-responsive"
+                          data-ultimate-target="#Info-box-wrap-7156 .aio-icon-description"
+                          data-responsive-json-new='{"font-size":"","line-height":""}'
+                        >
+                          <p style="text-align: center">
+                             We aim at providing Startups financial help so as
+                            to make sure that finance should not be barrier in
+                            the path of successful idea through our initiatives
+                            such as The Startup Expo
+                          </p>
+                        </div>
+                        <!-- description -->
+                      </div>
+                      <!-- aio-icon-box -->
+                    </div>
+                    <!-- aio-icon-component -->
+                  </div>
+                </div>
+              </div>
+              <div class="wpb_column vc_column_container vc_col-sm-3">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    <div class="aio-icon-component style_3">
+                      <div
+                        id="Info-box-wrap-3435"
+                        class="aio-icon-box top-icon"
+                        style=""
+                      >
+                        <div class="aio-icon-top">
+                          <div class="ult-just-icon-wrapper">
+                            <div class="align-icon" style="text-align: center">
+                              <div
+                                class="aio-icon none"
+                                data-animation="slideInDown"
+                                data-animation-delay="03"
+                                style="
+                                  color: #2f92bb;
+                                  font-size: 32px;
+                                  display: inline-block;
+                                "
+                              >
+                                <i class="fab fa-gripfire fa-3x"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="aio-icon-header">
+                          <h3
+                            class="aio-icon-title ult-responsive"
+                            data-ultimate-target="#Info-box-wrap-3435 .aio-icon-title"
+                            data-responsive-json-new='{"font-size":"","line-height":""}'
+                            style="font-family: 'Cinzel', serif"
+                          >
+                            Development
+                          </h3>
+                        </div>
+                        <!-- header -->
+                        <div
+                          class="aio-icon-description ult-responsive"
+                          data-ultimate-target="#Info-box-wrap-3435 .aio-icon-description"
+                          data-responsive-json-new='{"font-size":"","line-height":""}'
+                          style=""
+                        >
+                          <p style="text-align: center">
+                             Developing spirit of Entrepreneurship so as to
+                            develop an attitude and approach to thinking that
+                            actively seeks out change, rather than waiting to
+                            adapt to change.
+                          </p>
+                        </div>
+                        <!-- description -->
+                      </div>
+                      <!-- aio-icon-box -->
+                    </div>
+                    <!-- aio-icon-component -->
+                  </div>
+                </div>
+              </div>
+              <div class="wpb_column vc_column_container vc_col-sm-3">
+                <div class="vc_column-inner">
+                  <div class="wpb_wrapper">
+                    <div class="aio-icon-component style_3">
+                      <div
+                        id="Info-box-wrap-5288"
+                        class="aio-icon-box top-icon"
+                        style=""
+                      >
+                        <div class="aio-icon-top">
+                          <div class="ult-just-icon-wrapper">
+                            <div class="align-icon" style="text-align: center">
+                              <div
+                                class="aio-icon none"
+                                data-animation="slideInDown"
+                                data-animation-delay="03"
+                                style="
+                                  color: #2f92bb;
+                                  font-size: 32px;
+                                  display: inline-block;
+                                "
+                              >
+                                <i class="fas fa-lightbulb fa-3x"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="aio-icon-header">
+                          <h3
+                            class="aio-icon-title ult-responsive"
+                            data-ultimate-target="#Info-box-wrap-5288 .aio-icon-title"
+                            data-responsive-json-new='{"font-size":"","line-height":""}'
+                            style="font-family: 'Cinzel', serif"
+                          >
+                            Internships
+                          </h3>
+                        </div>
+                        <!-- header -->
+                        <div
+                          class="aio-icon-description ult-responsive"
+                          data-ultimate-target="#Info-box-wrap-5288 .aio-icon-description"
+                          data-responsive-json-new='{"font-size":"","line-height":""}'
+                          style=""
+                        >
+                          <p style="text-align: center">
+                             Proving student with Internships so as to develop
+                            practical skills and helping startups to grow by
+                            helping them to choose the best interns.
+                          </p>
+                        </div>
+                        <!-- description -->
+                      </div>
+                      <!-- aio-icon-box -->
+                    </div>
+                    <!-- aio-icon-component -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vc_row-full-width vc_clearfix"></div>
+    <div
+      class="upb_color"
+      data-bg-override="0"
+      data-bg-color="#eee"
+      data-fadeout=""
+      data-fadeout-percentage="30"
+      data-parallax-content=""
+      data-parallax-content-sense="30"
+      data-row-effect-mobile-disable="true"
+      data-img-parallax-mobile-disable="true"
+      data-rtl="false"
+      data-custom-vc-row=""
+      data-vc="6.0.5"
+      data-is_old_vc=""
+      data-theme-support=""
+      data-overlay="false"
+      data-overlay-color=""
+      data-overlay-pattern=""
+      data-overlay-pattern-opacity=""
+      data-overlay-pattern-size=""
+    ></div>
 
+    <!-- Upcoming Events -->
 
+    <div
+      class="vc_row wpb_row vc_row-fluid vc_custom_1494625858679"
+      id="events_cards"
+      style="margin-top: 100px !important"
+    >
+      <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div
+              class="ult-animation ult-animate-viewport ult-no-mobile"
+              data-animate="fadeInDown"
+              data-animation-delay="0"
+              data-animation-duration="3"
+              data-animation-iteration="1"
+              style="opacity: 0"
+              data-opacity_start_effect=""
+            >
+              <div
+                id="ultimate-heading-58855ec7fe8b6b57b"
+                class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982"
+                data-hspacer="line_only"
+                data-halign="center"
+                style="text-align: center"
+              >
+                <div
+                  class="uvc-main-heading ult-responsive"
+                  data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2"
+                  data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'
+                >
+                  <h2
+                    style="
+                      font-family: 'Cinzel', serif;
+                      font-weight: 700;
+                      color: #333333;
+                    "
+                  >
+                    UPCOMING EVENTS
+                  </h2>
+                </div>
+                <div
+                  class="uvc-heading-spacer line_only"
+                  style="margin-top: 20px; margin-bottom: 35px; height: 2px"
+                >
+                  <span
+                    class="uvc-headings-line"
+                    style="
+                      border-style: solid;
+                      border-bottom-width: 2px;
+                      border-color: #2f92bb;
+                      width: 70px;
+                    "
+                  ></span>
+                </div>
+                <div
+                  class="uvc-sub-heading ult-responsive"
+                  data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading "
+                  data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}'
+                  style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;"
+                ></div>
+              </div>
+            </div>
+            <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+              <div class="wpb_wrapper">
+                <style>
+                  @media screen and (max-width: 600px) {
+                    .vc_custom_1522954642578 {
+                      padding-top: 20px !important;
+                    }
+                  }
+                </style>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Counter -->
-<!--             <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1494683773685">
+      <div
+        class="wpb_column vc_column_container vc_col-sm-4"
+        style="width: 40%; margin: 3% 5% 5% 5%"
+      >
+        <div class="vc_column-inner vc_custom_1494625737076">
+          <div class="wpb_wrapper">
+            <div class="flip-box-wrap" style="margin: 0px; padding: 0px">
+              <div
+                class="flip-box ifb-custom-height horizontal_door_flip flip-box-custom-height flip-ifb-custom-height"
+                id="cards"
+                style="min-width: 450px"
+                data-min-height="550px"
+              >
+                <div class="ifb-flip-box" id="flip-box-wrap-9665">
+                  <div
+                    class="ifb-face ifb-front"
+                    style="color: #333333; background: #f3eeee"
+                  >
+                    <div
+                      class="ifb-flip-box-section ifb-flip-box-section-vertical-middle"
+                    >
+                      <h3
+                        class="ult-responsive flipbox_heading"
+                        data-ultimate-target="#flip-box-wrap-9665 .ult-responsive.flipbox_heading"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="
+                          color: #333333;
+                          font-size: 29px;
+                          font-style: 'Montserrat';
+                        "
+                      >
+                        HAWKEYE
+                      </h3>
+                      <div
+                        class="ifb-flip-box-section-content ult-responsive"
+                        data-ultimate-target="#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="color: #333333; font-size: 18px"
+                      >
+                        <p>22nd-23rd AUGUST, 2020</p>
+                      </div>
+                      <img
+                        class="img-icon"
+                        alt="Venture-Lab"
+                        src="{%static 'home/images/ImagesHomePage/hawkeye.jpeg'%}"
+                        height="500px"
+                        width="500px"
+                      />
+                      <p>
+                        HawkEye is our flagship Online trading event where
+                        participants can experience the adrenaline rush of stock
+                        markets in a virtual trading platform.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- END .front -->
+                  <div
+                    class="ifb-face ifb-back"
+                    id="cards"
+                    style="color: #333333; background: #fcfcfc"
+                  >
+                    <div
+                      class="ifb-flip-box-section ifb-flip-box-section-vertical-middle"
+                    >
+                      <h3
+                        class="ult-responsive flipbox_heading"
+                        data-ultimate-target="#flip-box-wrap-9665 .ult-responsive.flipbox_heading"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="color: #333333"
+                      >
+                        HAWKEYE
+                      </h3>
+                      <div
+                        class="ifb-flip-box-section-content ult-responsive"
+                        data-ultimate-target="#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="color: #333333; color: #333333"
+                      >
+                        <p style="text-align: justify">
+                          HawkEye is an online trading battle where participants
+                          are provided with virtual currency to buy/sell
+                          equities of companies from various sectors on a
+                          virtual trading platform. News flashes will decide the
+                          fate of the companies across different sectors.
+
+                          <br />People can test strategies and contingency plans
+                          in this event to develop spontaneous decision taking
+                          skills and risk management.
+
+                          <br />The ultimate goal is to finish with as much
+                          capital as possible.
+                        </p>
+                      </div>
+                      <div
+                        class="vc_custom_1494621689637 ubtn-ctn-left"
+                        style="padding-left: 30%"
+                      >
+                        <a
+                          class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom"
+                          href="http://www.hawkeye.edctiet.com/"
+                        >
+                          <button
+                            type="button"
+                            id="ubtn-2814"
+                            class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg none ubtn-sep-icon ubtn-sep-icon-left-push ubtn-left tooltip-5ec7fe8b6caec"
+                            data-hover="#2f92bb"
+                            data-border-color="#2f92bb"
+                            data-bg="#2f92bb"
+                            data-hover-bg="#f9f9f9"
+                            data-border-hover="#2f92bb"
+                            data-shadow-hover=""
+                            data-shadow-click="none"
+                            data-shadow=""
+                            data-shd-shadow=""
+                            data-ultimate-target="#ubtn-2814"
+                            data-responsive-json-new='{"font-size":"","line-height":""}'
+                            style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;"
+                            style="margin-left: 20px"
+                          >
+                            <span class="ubtn-data ubtn-icon"
+                              ><i
+                                class="fas fa-rocket"
+                                style="font-size: 32px; color: #2f92bb"
+                              ></i
+                            ></span>
+                            <span
+                              class="ubtn-hover"
+                              style="background-color: #f9f9f9"
+                            ></span>
+                            <span class="ubtn-data ubtn-text">Know More</span>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END .back -->
+                </div>
+                <!-- ifb-flip-box -->
+              </div>
+              <!-- flip-box -->
+            </div>
+            <!-- End icon block -->
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="wpb_column vc_column_container vc_col-sm-4"
+        style="width: 40%; margin: 3% 5% 5% 5%"
+      >
+        <div class="vc_column-inner vc_custom_1494625737076">
+          <div class="wpb_wrapper">
+            <div class="flip-box-wrap" style="margin: 0px; padding: 0px">
+              <div
+                class="flip-box ifb-custom-height horizontal_door_flip flip-box-custom-height flip-ifb-custom-height"
+                id="cards"
+                style="min-width: 450px"
+                data-min-height="550px"
+              >
+                <div class="ifb-flip-box" id="flip-box-wrap-9665">
+                  <div
+                    class="ifb-face ifb-front"
+                    style="color: #333333; background: #f3eeee"
+                  >
+                    <div
+                      class="ifb-flip-box-section ifb-flip-box-section-vertical-middle"
+                    >
+                      <h3
+                        class="ult-responsive flipbox_heading"
+                        data-ultimate-target="#flip-box-wrap-9665 .ult-responsive.flipbox_heading"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="
+                          color: #333333;
+                          font-size: 29px;
+                          font-style: 'Montserrat';
+                        "
+                      >
+                        E-SUMMIT
+                      </h3>
+                      <div
+                        class="ifb-flip-box-section-content ult-responsive"
+                        data-ultimate-target="#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="color: #333333; font-size: 18px"
+                      >
+                        <p>FEBURARY, 2021</p>
+                      </div>
+                      <img
+                        class="img-icon"
+                        alt="E-summit"
+                        src="{%static 'home/images/ImagesHomePage/esummit.jpg'%}"
+                        height="500px"
+                        width="500px"
+                      />
+                      <p>
+                        E -summit - our flagship event - brings to you for 3
+                        days a series of exciting games, inspiring talks and our
+                        most awaited internship fair to awaken the spirit of
+                        entrepreneurship in you.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- END .front -->
+                  <div
+                    class="ifb-face ifb-back"
+                    id="cards"
+                    style="color: #333333; background: #fcfcfc"
+                  >
+                    <div
+                      class="ifb-flip-box-section ifb-flip-box-section-vertical-middle"
+                    >
+                      <h3
+                        class="ult-responsive flipbox_heading"
+                        data-ultimate-target="#flip-box-wrap-9665 .ult-responsive.flipbox_heading"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="color: #333333"
+                      >
+                        E-SUMMIT
+                      </h3>
+                      <div
+                        class="ifb-flip-box-section-content ult-responsive"
+                        data-ultimate-target="#flip-box-wrap-9665 .ifb-flip-box-section-content.ult-responsive"
+                        data-responsive-json-new='{"font-size":"","line-height":""}'
+                        style="color: #333333; color: #333333"
+                      >
+                        <p style="text-align: justify">
+                          The Entrepreneurship Cell is Asia's largest
+                          entrepreneurship promoting college body. Our flagship
+                          event, The E-Summit continues to inspire countless
+                          ideas, expedite innovative startups and multiply
+                          fruitful networks through a jam-packed cluster of
+                          events designed for everyone. The E-Summit 2020 aims
+                          to accelerate these ideas through the stratosphere.
+                          Because we know that great ideas are hard to come by!
+                        </p>
+                      </div>
+                      <div
+                        class="vc_custom_1494621689637 ubtn-ctn-left"
+                        style="padding-left: 30%"
+                      >
+                        <a
+                          class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom"
+                          href="{% url 'esummit' %}"
+                        >
+                          <button
+                            type="button"
+                            id="ubtn-2814"
+                            class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg none ubtn-sep-icon ubtn-sep-icon-left-push ubtn-left tooltip-5ec7fe8b6caec"
+                            data-hover="#2f92bb"
+                            data-border-color="#2f92bb"
+                            data-bg="#2f92bb"
+                            data-hover-bg="#f9f9f9"
+                            data-border-hover="#2f92bb"
+                            data-shadow-hover=""
+                            data-shadow-click="none"
+                            data-shadow=""
+                            data-shd-shadow=""
+                            data-ultimate-target="#ubtn-2814"
+                            data-responsive-json-new='{"font-size":"","line-height":""}'
+                            style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;"
+                            style="margin-left: 20px"
+                          >
+                            <span class="ubtn-data ubtn-icon"
+                              ><i
+                                class="fas fa-rocket"
+                                style="font-size: 32px; color: #2f92bb"
+                              ></i
+                            ></span>
+                            <span
+                              class="ubtn-hover"
+                              style="background-color: #f9f9f9"
+                            ></span>
+                            <span class="ubtn-data ubtn-text">Know More</span>
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END .back -->
+                </div>
+                <!-- ifb-flip-box -->
+              </div>
+              <!-- flip-box -->
+            </div>
+            <!-- End icon block -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Upcoming Events Background -->
+    <div
+      class="upb_color"
+      data-bg-override="0"
+      data-bg-color="#fff"
+      data-fadeout=""
+      data-fadeout-percentage="30"
+      data-parallax-content=""
+      data-parallax-content-sense="30"
+      data-row-effect-mobile-disable="true"
+      data-img-parallax-mobile-disable="true"
+      data-rtl="false"
+      data-custom-vc-row=""
+      data-vc="6.0.5"
+      data-is_old_vc=""
+      data-theme-support=""
+      data-overlay="false"
+      data-overlay-color=""
+      data-overlay-pattern=""
+      data-overlay-pattern-opacity=""
+      data-overlay-pattern-size=""
+    ></div>
+
+    <!-- Counter -->
+    <!--             <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1494683773685">
                 <div class="wpb_column vc_column_container vc_col-sm-3">
                     <div class="vc_column-inner">
                         <div class="wpb_wrapper">
@@ -738,199 +1456,580 @@ class="home page-template-default page page-id-17 woocommerce-no-js has-fixed-he
                 </div>
             </div>
             <div class="vc_row-full-width vc_clearfix"></div>
- -->    
-            <!-- Counter Background -->
-<!--             <div class="upb_bg_img" data-ultimate-bg="url({% static 'home/images/ImagesHomePage/home4.jpg' %})" data-ultimate-bg-style="vcpb-vz-jquery" data-bg-img-repeat="repeat" data-bg-img-size="cover" data-bg-img-position="" data-parallx_sense="30" data-bg-override="0" data-bg_img_attach="scroll" data-upb-overlay-color="" data-upb-bg-animation="" data-fadeout="fadeout_row_value" data-bg-animation="left-animation" data-bg-animation-type="h" data-animation-repeat="repeat" data-fadeout-percentage="50" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
+ -->
+    <!-- Counter Background -->
+    <!--             <div class="upb_bg_img" data-ultimate-bg="url({% static 'home/images/ImagesHomePage/home4.jpg' %})" data-ultimate-bg-style="vcpb-vz-jquery" data-bg-img-repeat="repeat" data-bg-img-size="cover" data-bg-img-position="" data-parallx_sense="30" data-bg-override="0" data-bg_img_attach="scroll" data-upb-overlay-color="" data-upb-bg-animation="" data-fadeout="fadeout_row_value" data-bg-animation="left-animation" data-bg-animation-type="h" data-animation-repeat="repeat" data-fadeout-percentage="50" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
 
  -->
-            <!-- Message From President's Desk -->
-            <div class="vc_row wpb_row vc_row-fluid vc_custom_1494624914514" id="pmsg" style="margin-top: 80px;padding-left: 50px; padding-right: 60px; margin-left: 0px">
-                <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                    <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper"></div>
-                        </div>
-                    </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-6">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInDown" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                    <div id="ultimate-heading-58855ec7fe8b6b57b" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982 " data-hspacer="line_only" data-halign="center" style="text-align:center">
-                                        <div class="uvc-main-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2' data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'>
-                                            <h2 style="font-family: 'Cinzel', serif;font-weight:700;color:#333333;">MESSAGE FROM PRESIDENT'S DESK</h2>
-                                        </div>
-                                        <div class="uvc-heading-spacer line_only" style="margin-top:20px;margin-bottom:35px;height:2px;"><span class="uvc-headings-line" style="border-style:solid;border-bottom-width:2px; border-color:#2f92bb;;width:70px;"></span></div>
-                                        <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-                                    <div class="wpb_wrapper">
-                                        <style>
-                                            @media screen and (max-width: 600px) {
-                                                .vc_custom_1522954642578 {
-                                                    padding-top: 20px !important;
-                                                }
-                                            }
-
-                                        </style>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wpb_column vc_column_container vc_col-sm-3">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper"></div>
-                        </div>
-                    </div>
+    <!-- Message From President's Desk -->
+    <div
+      class="vc_row wpb_row vc_row-fluid vc_custom_1494624914514"
+      id="pmsg"
+      style="
+        margin-top: 80px;
+        padding-left: 50px;
+        padding-right: 60px;
+        margin-left: 0px;
+      "
+    >
+      <div class="vc_row wpb_row vc_inner vc_row-fluid">
+        <div class="wpb_column vc_column_container vc_col-sm-3">
+          <div class="vc_column-inner">
+            <div class="wpb_wrapper"></div>
+          </div>
+        </div>
+        <div class="wpb_column vc_column_container vc_col-sm-6">
+          <div class="vc_column-inner">
+            <div class="wpb_wrapper">
+              <div
+                class="ult-animation ult-animate-viewport ult-no-mobile"
+                data-animate="fadeInDown"
+                data-animation-delay="0"
+                data-animation-duration="3"
+                data-animation-iteration="1"
+                style="opacity: 0"
+                data-opacity_start_effect=""
+              >
+                <div
+                  id="ultimate-heading-58855ec7fe8b6b57b"
+                  class="uvc-heading ult-adjust-bottom-margin ultimate-heading-58855ec7fe8b6b57b uvc-4982"
+                  data-hspacer="line_only"
+                  data-halign="center"
+                  style="text-align: center"
+                >
+                  <div
+                    class="uvc-main-heading ult-responsive"
+                    data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2"
+                    data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'
+                  >
+                    <h2
+                      style="
+                        font-family: 'Cinzel', serif;
+                        font-weight: 700;
+                        color: #333333;
+                      "
+                    >
+                      MESSAGE FROM PRESIDENT'S DESK
+                    </h2>
+                  </div>
+                  <div
+                    class="uvc-heading-spacer line_only"
+                    style="margin-top: 20px; margin-bottom: 35px; height: 2px"
+                  >
+                    <span
+                      class="uvc-headings-line"
+                      style="
+                        border-style: solid;
+                        border-bottom-width: 2px;
+                        border-color: #2f92bb;
+                        width: 70px;
+                      "
+                    ></span>
+                  </div>
+                  <div
+                    class="uvc-sub-heading ult-responsive"
+                    data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b .uvc-sub-heading "
+                    data-responsive-json-new='{"font-size":"desktop:20px;","line-height":"desktop:35px;"}'
+                    style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666;"
+                  ></div>
                 </div>
-                
-                <div class="wpb_column vc_column_container vc_col-md-5" id="pres_img">
-                    <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="wpb_single_image wpb_content_element vc_align_left  wpb_animate_when_almost_visible wpb_fadeInLeft fadeInLeft">
-
-                                <figure class="wpb_wrapper vc_figure">
-                                    <div class="vc_single_image-wrapper   vc_box_border_grey" style="margin-left: 60px;"><img alt="president edc" style="width:90%" src="{%static 'home/images/ImagesHomePage/mandeep.jpg'%}" class="vc_single_image-img attachment-full" alt="aboutUsImage" style="padding-top: 20%" /></div>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+                <div class="wpb_wrapper">
+                  <style>
+                    @media screen and (max-width: 600px) {
+                      .vc_custom_1522954642578 {
+                        padding-top: 20px !important;
+                      }
+                    }
+                  </style>
                 </div>
-                
-                <div class="wpb_column vc_column_container vc_col-md-7" id="pres_txt">
-                    <div class="vc_column-inner vc_custom_1494621972326" style="padding-top: 22px !important;">
-                        <div class="wpb_wrapper">
-                            <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInRight" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                <div id="ultimate-heading-3055ec7fe8b6caae" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-3055ec7fe8b6caae uvc-3649 " data-hspacer="line_only" data-halign="left" style="text-align:left">
-                                    <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666; text-align: justify;margin-right:70px;">The Entrepreneurship Development Cell, Thapar Institute of Engineering and Technology, Patiala, has been established to foster and nurture our talented youth, who are the future of this nation. With India witnessing a massive growth in startup culture, we aim to encourage and guide anyone passionate to learn and make an impact on the world. EDC provides budding entrepreneurs a platform to present and nurture their fundamental ideas. We envision a team of talented and hard-working individuals who strive to make students accessible with necessary resources and provide them a channel to venture capital firms, successful entrepreneurs, executive professionals and corporate so that they can watch their dream become a reality. It is our firm belief that Entrepreneurship is the key to unlock India's potential talent and thus, we strive to create, foster and promote Entrepreneurship.
-                                    </div>
-                                </div>
-
-                                <div class=" vc_custom_1494621689637 ubtn-ctn-left "><a class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom " href="{% url 'our-team' %}"><button type="button" id="ubtn-2814" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-left-push  ubtn-left   tooltip-5ec7fe8b6caec" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="#2f92bb" data-hover-bg="#f9f9f9" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-2814' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;"><span class="ubtn-data ubtn-icon"><i class="fas fa-rocket" style="font-size:32px;color:#2f92bb;" aria-hidden:true></i></span><span class="ubtn-hover" style="background-color:#f9f9f9"></span><span class="ubtn-data ubtn-text ">Know Our Team</span></button></a></div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="wpb_column vc_column_container vc_col-sm-3">
+          <div class="vc_column-inner">
+            <div class="wpb_wrapper"></div>
+          </div>
+        </div>
+      </div>
 
-             <!-- message from president Background -->
-             <div class="upb_color" data-bg-override="0" data-bg-color="#eee" data-fadeout="" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
-
-            
-
-            <!-- Internhips -->
-
-            <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1494626839758" style="padding-top: 20px !important; padding-bottom: 30px !important;">
-                <div class="wpb_column vc_column_container vc_col-sm-12">
-                    <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="uvc-main-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2' data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'>
-                                <h2 style="font-size: 32px; font-family: 'Cinzel', serif;font-weight:700;color:black; text-align: center;">Internships and Projects</h2>
-                            </div>
-                            <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_10 vc_sep_border_width_2 vc_sep_pos_align_center vc_separator_no_text vc_custom_1494626651578  vc_custom_1494626651578"><span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#2f92bb;" class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#2f92bb;" class="vc_sep_line"></span></span>
-                            </div>
-                            <div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown vc_custom_1494628064641">
-                                <div class="wpb_wrapper">
-                                    <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#4F4F4F; text-align: center; font-size: 23px;">Looking for projects to work on! Here are some internship opportunities where you can work with the startups and gain some professional experience.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="bounceIn" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                <div class=" vc_custom_1494626726323 ubtn-ctn-center "><a class="ubtn-link ult-adjust-bottom-margin ubtn-center ubtn-custom " href="{% url 'internships' %}"><button type="button" id="ubtn-4488" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-bottom-push  ubtn-center   tooltip-5ec7fe8b6f9b1" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="rgba(47, 146, 187,1)" data-hover-bg="white" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-4488' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: rgba(47, 146, 187,1);color: white;"><span class="ubtn-data ubtn-icon"><i class="far fa-star" style="font-size:32px;color:#2f92bb;"></i></span><span class="ubtn-hover" style="background-color:#2f92bb"></span><span class="ubtn-data ubtn-text" style="color: white;">Browse Internships</span></button></a></div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="wpb_column vc_column_container vc_col-md-5" id="pres_img">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div
+              class="wpb_single_image wpb_content_element vc_align_left wpb_animate_when_almost_visible wpb_fadeInLeft fadeInLeft"
+            >
+              <figure class="wpb_wrapper vc_figure">
+                <div
+                  class="vc_single_image-wrapper vc_box_border_grey"
+                  style="margin-left: 60px"
+                >
+                  <img
+                    alt="president edc"
+                    style="width: 90%"
+                    src="{%static 'home/images/ImagesHomePage/mandeep.jpg'%}"
+                    class="vc_single_image-img attachment-full"
+                    alt="aboutUsImage"
+                    style="padding-top: 20%"
+                  />
                 </div>
+              </figure>
             </div>
-            <div class="vc_row-full-width vc_clearfix"></div>
-            
-            <!-- Internships Background -->
-            <div class="upb_bg_img" data-ultimate-bg="url({%static 'home/images/ImagesHomePage/bizphoto2.jpg'%})" data-ultimate-bg-style="vcpb-vz-jquery" data-bg-img-repeat="repeat" data-bg-img-size="cover" data-bg-img-position="" data-parallx_sense="30" data-bg-override="0" data-bg_img_attach="scroll" data-upb-overlay-color="" data-upb-bg-animation="" data-fadeout="fadeout_row_value" data-bg-animation="left-animation" data-bg-animation-type="h" data-animation-repeat="repeat" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size="" style="background-repeat: no-repeat; background-color: black;" ></div>
-            
+          </div>
+        </div>
+      </div>
 
-            <!-- Blogs About Entrepreneurship -->
-
-            <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1494626839758" style="padding-top: 0px !important; padding-bottom: 60px !important;">
-                <div class="wpb_column vc_column_container vc_col-sm-12">
-                    <div class="vc_column-inner">
-                        <div class="wpb_wrapper">
-                            <div class="uvc-main-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2' data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'>
-                                <h2 style="font-size: 32px;font-family: 'Cinzel', serif;font-weight:700;color:black; text-align: center;">BizFanatics</h2>
-                            </div>
-                            <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_10 vc_sep_border_width_2 vc_sep_pos_align_center vc_separator_no_text vc_custom_1494626651578  vc_custom_1494626651578"><span class="vc_sep_holder vc_sep_holder_l"><span style="border-color:#2f92bb;" class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span style="border-color:#2f92bb;" class="vc_sep_line"></span></span>
-                            </div>
-                            <div class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown vc_custom_1494628064641">
-                                <div class="wpb_wrapper">
-                                    <div class="uvc-sub-heading ult-responsive" data-ultimate-target='.uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading ' data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}' style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#4F4F4F;text-align: center; font-size: 23px;">New to Entrepreneurship? <br> Check out our blogs which will take you through the ABC of entrepreneurship and some exciting entrepreneurship stories.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="bounceIn" data-animation-delay="0" data-animation-duration="3" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect="">
-                                <div class=" vc_custom_1494626726323 ubtn-ctn-center "><a class="ubtn-link ult-adjust-bottom-margin ubtn-center ubtn-custom " href="{% url 'blog-home' 1 %}"><button type="button" id="ubtn-4488" class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg  none  ubtn-sep-icon ubtn-sep-icon-bottom-push  ubtn-center   tooltip-5ec7fe8b6f9b1" data-hover="#2f92bb" data-border-color="#2f92bb" data-bg="rgba(47, 146, 187,1)" data-hover-bg="white" data-border-hover="#2f92bb" data-shadow-hover="" data-shadow-click="none" data-shadow="" data-shd-shadow="" data-ultimate-target='#ubtn-4488' data-responsive-json-new='{"font-size":"","line-height":""}' style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: rgba(47, 146, 187,1);color: white;"><span class="ubtn-data ubtn-icon"><i class="far fa-star" style="font-size:32px;color:#2f92bb;"></i></span><span class="ubtn-hover" style="background-color:#2f92bb"></span><span class="ubtn-data ubtn-text" style="color: white;">Go to Bizfanatics</span></button></a></div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="wpb_column vc_column_container vc_col-md-7" id="pres_txt">
+        <div
+          class="vc_column-inner vc_custom_1494621972326"
+          style="padding-top: 22px !important"
+        >
+          <div class="wpb_wrapper">
+            <div
+              class="ult-animation ult-animate-viewport ult-no-mobile"
+              data-animate="fadeInRight"
+              data-animation-delay="0"
+              data-animation-duration="3"
+              data-animation-iteration="1"
+              style="opacity: 0"
+              data-opacity_start_effect=""
+            >
+              <div
+                id="ultimate-heading-3055ec7fe8b6caae"
+                class="uvc-heading ult-adjust-bottom-margin ultimate-heading-3055ec7fe8b6caae uvc-3649"
+                data-hspacer="line_only"
+                data-halign="left"
+                style="text-align: left"
+              >
+                <div
+                  class="uvc-sub-heading ult-responsive"
+                  data-ultimate-target=".uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading "
+                  data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}'
+                  style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#666666; text-align: justify;margin-right:70px;"
+                >
+                  The Entrepreneurship Development Cell, Thapar Institute of
+                  Engineering and Technology, Patiala, has been established to
+                  foster and nurture our talented youth, who are the future of
+                  this nation. With India witnessing a massive growth in startup
+                  culture, we aim to encourage and guide anyone passionate to
+                  learn and make an impact on the world. EDC provides budding
+                  entrepreneurs a platform to present and nurture their
+                  fundamental ideas. We envision a team of talented and
+                  hard-working individuals who strive to make students
+                  accessible with necessary resources and provide them a channel
+                  to venture capital firms, successful entrepreneurs, executive
+                  professionals and corporate so that they can watch their dream
+                  become a reality. It is our firm belief that Entrepreneurship
+                  is the key to unlock India's potential talent and thus, we
+                  strive to create, foster and promote Entrepreneurship.
                 </div>
+              </div>
+
+              <div class="vc_custom_1494621689637 ubtn-ctn-left">
+                <a
+                  class="ubtn-link ult-adjust-bottom-margin ubtn-left ubtn-custom"
+                  href="{% url 'our-team' %}"
+                  ><button
+                    type="button"
+                    id="ubtn-2814"
+                    class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg none ubtn-sep-icon ubtn-sep-icon-left-push ubtn-left tooltip-5ec7fe8b6caec"
+                    data-hover="#2f92bb"
+                    data-border-color="#2f92bb"
+                    data-bg="#2f92bb"
+                    data-hover-bg="#f9f9f9"
+                    data-border-hover="#2f92bb"
+                    data-shadow-hover=""
+                    data-shadow-click="none"
+                    data-shadow=""
+                    data-shd-shadow=""
+                    data-ultimate-target="#ubtn-2814"
+                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                    style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: #2f92bb;color: #ffffff;"
+                  >
+                    <span class="ubtn-data ubtn-icon"
+                      ><i
+                        class="fas fa-rocket"
+                        style="font-size: 32px; color: #2f92bb"
+                        aria-hidden:true
+                      ></i></span
+                    ><span
+                      class="ubtn-hover"
+                      style="background-color: #f9f9f9"
+                    ></span
+                    ><span class="ubtn-data ubtn-text">Know Our Team</span>
+                  </button></a
+                >
+              </div>
             </div>
-            
-            <div class="vc_row-full-width vc_clearfix"></div>
-
-            <!-- Blogs Background -->
-            <div class="upb_color" data-bg-override="0" data-bg-color="" data-fadeout="" data-fadeout-percentage="30" data-parallax-content="" data-parallax-content-sense="30" data-row-effect-mobile-disable="true" data-img-parallax-mobile-disable="true" data-rtl="false" data-custom-vc-row="" data-vc="6.0.5" data-is_old_vc="" data-theme-support="" data-overlay="false" data-overlay-color="" data-overlay-pattern="" data-overlay-pattern-opacity="" data-overlay-pattern-size=""></div>
-            
-
-            
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- message from president Background -->
+    <div
+      class="upb_color"
+      data-bg-override="0"
+      data-bg-color="#eee"
+      data-fadeout=""
+      data-fadeout-percentage="30"
+      data-parallax-content=""
+      data-parallax-content-sense="30"
+      data-row-effect-mobile-disable="true"
+      data-img-parallax-mobile-disable="true"
+      data-rtl="false"
+      data-custom-vc-row=""
+      data-vc="6.0.5"
+      data-is_old_vc=""
+      data-theme-support=""
+      data-overlay="false"
+      data-overlay-color=""
+      data-overlay-pattern=""
+      data-overlay-pattern-opacity=""
+      data-overlay-pattern-size=""
+    ></div>
+
+    <!-- Internhips -->
+
+    <div
+      data-vc-full-width="true"
+      data-vc-full-width-init="false"
+      class="vc_row wpb_row vc_row-fluid vc_custom_1494626839758"
+      style="padding-top: 20px !important; padding-bottom: 30px !important"
+    >
+      <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div
+              class="uvc-main-heading ult-responsive"
+              data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2"
+              data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'
+            >
+              <h2
+                style="
+                  font-size: 32px;
+                  font-family: 'Cinzel', serif;
+                  font-weight: 700;
+                  color: black;
+                  text-align: center;
+                "
+              >
+                Internships and Projects
+              </h2>
+            </div>
+            <div
+              class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_10 vc_sep_border_width_2 vc_sep_pos_align_center vc_separator_no_text vc_custom_1494626651578 vc_custom_1494626651578"
+            >
+              <span class="vc_sep_holder vc_sep_holder_l"
+                ><span
+                  style="border-color: #2f92bb"
+                  class="vc_sep_line"
+                ></span></span
+              ><span class="vc_sep_holder vc_sep_holder_r"
+                ><span style="border-color: #2f92bb" class="vc_sep_line"></span
+              ></span>
+            </div>
+            <div
+              class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown vc_custom_1494628064641"
+            >
+              <div class="wpb_wrapper">
+                <div
+                  class="uvc-sub-heading ult-responsive"
+                  data-ultimate-target=".uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading "
+                  data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}'
+                  style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#4F4F4F; text-align: center; font-size: 23px;"
+                >
+                  Looking for projects to work on! Here are some internship
+                  opportunities where you can work with the startups and gain
+                  some professional experience.
+                </div>
+              </div>
+            </div>
+            <div
+              class="ult-animation ult-animate-viewport ult-no-mobile"
+              data-animate="bounceIn"
+              data-animation-delay="0"
+              data-animation-duration="3"
+              data-animation-iteration="1"
+              style="opacity: 0"
+              data-opacity_start_effect=""
+            >
+              <div class="vc_custom_1494626726323 ubtn-ctn-center">
+                <a
+                  class="ubtn-link ult-adjust-bottom-margin ubtn-center ubtn-custom"
+                  href="{% url 'internships' '1' %}"
+                  ><button
+                    type="button"
+                    id="ubtn-4488"
+                    class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg none ubtn-sep-icon ubtn-sep-icon-bottom-push ubtn-center tooltip-5ec7fe8b6f9b1"
+                    data-hover="#2f92bb"
+                    data-border-color="#2f92bb"
+                    data-bg="rgba(47, 146, 187,1)"
+                    data-hover-bg="white"
+                    data-border-hover="#2f92bb"
+                    data-shadow-hover=""
+                    data-shadow-click="none"
+                    data-shadow=""
+                    data-shd-shadow=""
+                    data-ultimate-target="#ubtn-4488"
+                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                    style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: rgba(47, 146, 187,1);color: white;"
+                  >
+                    <span class="ubtn-data ubtn-icon"
+                      ><i
+                        class="far fa-star"
+                        style="font-size: 32px; color: #2f92bb"
+                      ></i></span
+                    ><span
+                      class="ubtn-hover"
+                      style="background-color: #2f92bb"
+                    ></span
+                    ><span class="ubtn-data ubtn-text" style="color: white"
+                      >Browse Internships</span
+                    >
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="vc_row-full-width vc_clearfix"></div>
+
+    <!-- Internships Background -->
+    <div
+      class="upb_bg_img"
+      data-ultimate-bg="url({%static 'home/images/ImagesHomePage/bizphoto2.jpg'%})"
+      data-ultimate-bg-style="vcpb-vz-jquery"
+      data-bg-img-repeat="repeat"
+      data-bg-img-size="cover"
+      data-bg-img-position=""
+      data-parallx_sense="30"
+      data-bg-override="0"
+      data-bg_img_attach="scroll"
+      data-upb-overlay-color=""
+      data-upb-bg-animation=""
+      data-fadeout="fadeout_row_value"
+      data-bg-animation="left-animation"
+      data-bg-animation-type="h"
+      data-animation-repeat="repeat"
+      data-fadeout-percentage="30"
+      data-parallax-content=""
+      data-parallax-content-sense="30"
+      data-row-effect-mobile-disable="true"
+      data-img-parallax-mobile-disable="true"
+      data-rtl="false"
+      data-custom-vc-row=""
+      data-vc="6.0.5"
+      data-is_old_vc=""
+      data-theme-support=""
+      data-overlay="false"
+      data-overlay-color=""
+      data-overlay-pattern=""
+      data-overlay-pattern-opacity=""
+      data-overlay-pattern-size=""
+      style="background-repeat: no-repeat; background-color: black"
+    ></div>
+
+    <!-- Blogs About Entrepreneurship -->
+
+    <div
+      data-vc-full-width="true"
+      data-vc-full-width-init="false"
+      class="vc_row wpb_row vc_row-fluid vc_custom_1494626839758"
+      style="padding-top: 0px !important; padding-bottom: 60px !important"
+    >
+      <div class="wpb_column vc_column_container vc_col-sm-12">
+        <div class="vc_column-inner">
+          <div class="wpb_wrapper">
+            <div
+              class="uvc-main-heading ult-responsive"
+              data-ultimate-target=".uvc-heading.ultimate-heading-58855ec7fe8b6b57b h2"
+              data-responsive-json-new='{"font-size":"desktop:32px;","line-height":"desktop:32px;"}'
+            >
+              <h2
+                style="
+                  font-size: 32px;
+                  font-family: 'Cinzel', serif;
+                  font-weight: 700;
+                  color: black;
+                  text-align: center;
+                "
+              >
+                BizFanatics
+              </h2>
+            </div>
+            <div
+              class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_10 vc_sep_border_width_2 vc_sep_pos_align_center vc_separator_no_text vc_custom_1494626651578 vc_custom_1494626651578"
+            >
+              <span class="vc_sep_holder vc_sep_holder_l"
+                ><span
+                  style="border-color: #2f92bb"
+                  class="vc_sep_line"
+                ></span></span
+              ><span class="vc_sep_holder vc_sep_holder_r"
+                ><span style="border-color: #2f92bb" class="vc_sep_line"></span
+              ></span>
+            </div>
+            <div
+              class="wpb_text_column wpb_content_element wpb_animate_when_almost_visible wpb_fadeInDown fadeInDown vc_custom_1494628064641"
+            >
+              <div class="wpb_wrapper">
+                <div
+                  class="uvc-sub-heading ult-responsive"
+                  data-ultimate-target=".uvc-heading.ultimate-heading-3055ec7fe8b6caae .uvc-sub-heading "
+                  data-responsive-json-new='{"font-size":"desktop:16px;","line-height":"desktop:35px;"}'
+                  style="font-family:&#039;Josefin Sans&#039;;font-weight:300;color:#4F4F4F;text-align: center; font-size: 23px;"
+                >
+                  New to Entrepreneurship? <br />
+                  Check out our blogs which will take you through the ABC of
+                  entrepreneurship and some exciting entrepreneurship stories.
+                </div>
+              </div>
+            </div>
+            <div
+              class="ult-animation ult-animate-viewport ult-no-mobile"
+              data-animate="bounceIn"
+              data-animation-delay="0"
+              data-animation-duration="3"
+              data-animation-iteration="1"
+              style="opacity: 0"
+              data-opacity_start_effect=""
+            >
+              <div class="vc_custom_1494626726323 ubtn-ctn-center">
+                <a
+                  class="ubtn-link ult-adjust-bottom-margin ubtn-center ubtn-custom"
+                  href="{% url 'blog-home' 1 %}"
+                  ><button
+                    type="button"
+                    id="ubtn-4488"
+                    class="ubtn ult-adjust-bottom-margin ult-responsive ubtn-custom ubtn-center-dg-bg none ubtn-sep-icon ubtn-sep-icon-bottom-push ubtn-center tooltip-5ec7fe8b6f9b1"
+                    data-hover="#2f92bb"
+                    data-border-color="#2f92bb"
+                    data-bg="rgba(47, 146, 187,1)"
+                    data-hover-bg="white"
+                    data-border-hover="#2f92bb"
+                    data-shadow-hover=""
+                    data-shadow-click="none"
+                    data-shadow=""
+                    data-shd-shadow=""
+                    data-ultimate-target="#ubtn-4488"
+                    data-responsive-json-new='{"font-size":"","line-height":""}'
+                    style="font-family:&#039;Josefin Sans&#039;;font-weight:500;width:px;min-height:px;padding:20px 50px;border-radius:0px;border-width:2px;border-color:#2f92bb;border-style:solid;background: rgba(47, 146, 187,1);color: white;"
+                  >
+                    <span class="ubtn-data ubtn-icon"
+                      ><i
+                        class="far fa-star"
+                        style="font-size: 32px; color: #2f92bb"
+                      ></i></span
+                    ><span
+                      class="ubtn-hover"
+                      style="background-color: #2f92bb"
+                    ></span
+                    ><span class="ubtn-data ubtn-text" style="color: white"
+                      >Go to Bizfanatics</span
+                    >
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vc_row-full-width vc_clearfix"></div>
+
+    <!-- Blogs Background -->
+    <div
+      class="upb_color"
+      data-bg-override="0"
+      data-bg-color=""
+      data-fadeout=""
+      data-fadeout-percentage="30"
+      data-parallax-content=""
+      data-parallax-content-sense="30"
+      data-row-effect-mobile-disable="true"
+      data-img-parallax-mobile-disable="true"
+      data-rtl="false"
+      data-custom-vc-row=""
+      data-vc="6.0.5"
+      data-is_old_vc=""
+      data-theme-support=""
+      data-overlay="false"
+      data-overlay-color=""
+      data-overlay-pattern=""
+      data-overlay-pattern-opacity=""
+      data-overlay-pattern-size=""
+    ></div>
+  </div>
 </div>
 
-    <script>
-        var myIndex = 0;
-        carousel();
+<script>
+  var myIndex = 0;
+  carousel();
 
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 5000); // Change image every 5 seconds
-}
-    </script>
-    <script>var slideIndex = 1;
-        showSlides(slideIndex);
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1;
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 5 seconds
+  }
+</script>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            // var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            // for (i = 0; i < dots.length; i++) {
-            //     dots[i].className = dots[i].className.replace(" active", "");
-            // }
-            slides[slideIndex - 1].style.display = "block";
-            // dots[slideIndex - 1].className += " active"
-        }</script>        
-    <script type='text/javascript' src="{% static 'home/js/info-box.min.js'%}"></script>
-    <script type='text/javascript' src="{% static 'home/js/flip-box.min.js'%}"></script>
-    <script type='text/javascript' src="{% static 'home/js/vhparallax.min.js'%}"></script>
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    // var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    // for (i = 0; i < dots.length; i++) {
+    //     dots[i].className = dots[i].className.replace(" active", "");
+    // }
+    slides[slideIndex - 1].style.display = "block";
+    // dots[slideIndex - 1].className += " active"
+  }
+</script>
+<script
+  type="text/javascript"
+  src="{% static 'home/js/info-box.min.js'%}"
+></script>
+<script
+  type="text/javascript"
+  src="{% static 'home/js/flip-box.min.js'%}"
+></script>
+<script
+  type="text/javascript"
+  src="{% static 'home/js/vhparallax.min.js'%}"
+></script>
 {% endblock body %}

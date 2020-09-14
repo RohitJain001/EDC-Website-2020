@@ -9,15 +9,22 @@ from django.views.generic import DetailView, UpdateView, DeleteView
 from .forms import InternshipForm, ApplicationForm, VenCapForm
 from .models import Internship, InternshipApplication, VentureCapitalist
 import datetime, xlwt
+from django.core.paginator import Paginator
 
 
-def Internships(request):
+def Internships(request, pg=1):
+    internship = Internship.objects.all().order_by('-apply_by')
+    paginator = Paginator(internship, 8)
     context = {
-        'internships': Internship.objects.all().order_by('-apply_by')
+        'Intern': paginator.page(pg),
+        'page': pg,
+      	'paginator': paginator,
+        'internships': paginator.page(pg)
     }
     return render(request, 'internshipPortal/Internship.html', context)
 
 def MyInternships(request):
+    pg = 1
     if(request.user.is_authenticated and request.user.is_startup):
         internships = Internship.objects.filter(startup=request.user.startup_profile).order_by('-apply_by')
         context = {
@@ -31,20 +38,21 @@ def MyInternships(request):
         }
         return render(request, 'internshipPortal/MyInternshipStudent.html', context)
     else:
-        redirect(internships)
+        redirect(internships, pg=pg)
     
     
 
 def InternshipCreateView(request):
+    pg = 1
     form = InternshipForm(request.POST or None)
     if request.user.is_authenticated and request.user.is_startup:
         if form.is_valid():
             form.instance.startup = request.user.startup_profile
             form.save()
-            return redirect('internships')
+            return redirect('internships', pg=pg)
     else:
         messages.success(request, f'You are not authorised to access this page.')
-        return redirect('internships')
+        return redirect('internships', pg=pg)
 
     context = {
         'form': form
@@ -53,6 +61,7 @@ def InternshipCreateView(request):
 
 
 def InternshipApplicationView(request, pk):
+    pg = 1
     internship = Internship.objects.filter(id=pk).first()
     applied_by = InternshipApplication.objects.filter(applied_by=request.user.student_profile)
     date = datetime.date.today()
@@ -63,7 +72,8 @@ def InternshipApplicationView(request, pk):
     
     if(internship == None or date > internship.apply_by):
         messages.success(request, f'Applications for this internship closed.')
-        return redirect('internships')
+        return redirect('internships', pg = pg)
+        
 
     form = ApplicationForm(request.POST or None)
     
@@ -81,6 +91,7 @@ def InternshipApplicationView(request, pk):
 
 
 def InternshipDetailView(request, pk):
+    pg = 1
     applied = False
 
     internship = Internship.objects.filter(id=pk).first()
@@ -99,13 +110,14 @@ def InternshipDetailView(request, pk):
 
 
 def InternshipUpdateView(request, pk):
+    pg = 1
     if request.user.is_authenticated and request.user.is_startup and (request.user.startup_profile == Internship.objects.filter(id=pk).first().startup):
         if request.method == 'POST':
             form = InternshipForm(request.POST, instance=Internship.objects.filter(id=pk).first())
             
             if form.is_valid():
                 form.save()
-                return redirect('internships')
+                return redirect('internships', pg=pg)
 
         form = InternshipForm(instance=Internship.objects.filter(id=pk).first())
         context = {
@@ -115,16 +127,17 @@ def InternshipUpdateView(request, pk):
 
     else:
         messages.success(request, f'You are not authorised to access this page.')
-        return redirect('internships')
+        return redirect('internships', pg=pg)
 
 
 def InternshipDeleteView(request, pk): 
+    pg = 1
     obj = get_object_or_404(Internship, id=pk)
     internship = Internship.objects.filter(id=pk).first()
     if request.user.is_authenticated and request.user.is_startup and (request.user.startup_profile == obj.startup):
         if request.method =="POST":  
             obj.delete()  
-            return redirect('internships') 
+            return redirect('internships', pg=pg)
 
     else:
         messages.success(request, f'You are not authorised to access this page')

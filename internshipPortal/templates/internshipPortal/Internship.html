@@ -440,7 +440,34 @@ vc_responsive"
                 </div>
             </div>
             {% endfor %}
-
+            <div id="post-496"
+                class=" spaudio-post blogs-featured blogs-style2 blogs-style1 spcard post-496 post type-post status-publish format-audio has-post-thumbnail hentry category-art category-blog category-retro tag-country tag-natur tag-photo tag-photog post_format-post-format-audio"
+                style="margin-top: 30px; margin-bottom: 100px; width: 100%;">
+                <div class="pagination">
+                    <ul style="
+                          display: flex;
+                          flex-direction: row;
+                          flex-wrap: wrap;
+                          justify-content: center;
+                        ">
+                        {% if Intern.has_previous %}
+                        <li>
+                            <a class="page-selector" href="{% url 'internships'  page|add:'-1' %}">&laquo;</a>
+                        </li>
+                        {% endif %} {% for p in paginator.page_range %} {% if p == page %}
+                        <li class="active"><a href="">{{p}}</a></li>
+                        {% else %}
+                        <li>
+                            <a href="{% url 'internships' p %}" class="inactive">{{p}}</a>
+                        </li>
+                        {% endif %} {% endfor %} {% if Intern.has_next %}
+                        <li>
+                            <a class="page-selector" href="{% url 'internships' page|add:'+1' %}">&raquo;</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
             {% else %}
             <br><br><br><br>
             <div class="wrapper">
